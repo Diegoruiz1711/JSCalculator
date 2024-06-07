@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js"></script>
+</head>
+
+<body onload="onLoad()">
+  <div class="contenedor">
+    <div class="botones">
+      <a href="#" type="buttom">
+        <div class="boton" id="classic">Classic</div>
+      </a>
+      <a href="#" type="buttom">
+        <div class="boton red" id="red">Red</div>
+      </a>
+      <a href="#" type="buttom">
+        <div class="boton green" id="green">Green</div>
+      </a>
+      <a href="#" type="buttom">
+        <div class="boton gys" id="gold-silver">Gold & Silver</div>
+      </a>
+      <a href="#" type="buttom">
+        <div class="boton imagen" id="image">Image</div>
+      </a>
+      <a href="#" type="buttom">
+        <div class="boton cool" id="cool">Cool</div>
+      </a>
+    </div>
+
+    <div class="contenedorCalculadora">
+      <div class="contenedor-visor">
+        <div class="visorAcumulador">
+          <p class="acumulador"></p>
+        </div>
+        <div class="visorActual">
+          <p class="actual"></p>
+        </div>
+      </div>
+      <div class="contenedor-numeros">
+        <a href="#" type="buttom">
+          <div class="numeros">7</div>
+        </a>
+        <a href="#" type="buttom">
+          <div class="numeros">8</div>
+        </a>
+        <a href="#" type="buttom">
+          <div class="numeros">9</div>
+        </a>
+        <a href="#" type="buttom">
+          <div class="numeros">%</div>
+        </a>
+        <a href="#" type="buttom">
+          <div class="numeros">4</div>
+        </a>
+        <a href="#" type="buttom">
+          <div class="numeros">5</div>
+        </a>
+        <a href="#" type="buttom">
+          <div class="numeros">6</div>
+        </a>
+        <a href="#" type="buttom">
+          <div class="numeros">x</div>
+        </a>
+        <a href="#" type="buttom">
+          <div class="numeros">1</div>
+        </a>
+        <a href="#" type="buttom">
+          <div class="numeros">2</div>
+        </a>
+        <a href="#" type="buttom">
+          <div class="numeros">3</div>
+        </a>
+        <a href="#" type="buttom">
+          <div class="numeros">-</div>
+        </a>
+        <a href="#" type="buttom">
+          <div class="numeros">CE</div>
+        </a>
+        <a href="#" type="buttom">
+          <div class="numeros">0</div>
+        </a>
+        <a href="#" type="buttom">
+          <div class="numeros">+</div>
+        </a>
+        <a href="#" type="buttom">
+          <div class="numeros" id="igual">=</div>
+        </a>
+      </div>
+    </div>
+    <div class="historialCalculadora">
+      <div class="notas">
+        <img src="./images/espiral.png" alt="imagen de espiral" class="img_espiral">
+        <div class="historialCalculos">
+          <h1>Historial de cálculos</h1>
+          <ul id="historial"></ul>
+        </div>
+      </div>
+      <a href="#" type="buttom">
+        <div class="borrar">Borrar Historial</div>
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>

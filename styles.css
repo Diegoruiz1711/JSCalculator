@@ -1,0 +1,434 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+*   Proyect: Reto3 - Calculadora                          *
+*   Author: Diego Ruiz Martin                                        * 
+*   Support: ruizdiego.17.11@gmail.com                               *
+*   Version: 1.3                                                     *
+*                                                                    *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+   -----------------------------------------------------------------------------------
+
+ * * * * * TABLE OF CONTENTS * * * * * 
+*
+*   From top to bottom:
+*
+*   01. Contenedor
+*   02. Calculadora
+*   03. Historial de cálculos
+*   04. Botones 
+*   05. Estilos
+*     05.1 Estilos de calculadora
+*     05.2 Estilos de botones
+*     05.3 Estilos de historial
+*   
+ * * * * * * * * * * * * * * * * * * * * */
+
+/*----------------------------------------*/
+/*  01. Contenedor
+/*----------------------------------------*/
+
+.contenedor {
+    background-image: url(./images/mesa.png);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*----------------------------------------*/
+/*  02. Calculadora
+/*----------------------------------------*/
+
+.contenedorCalculadora {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 2px solid white;
+    background-color: rgb(69, 69, 69);
+    height: 630px;
+    width: 570px;
+    padding-top: 20px;
+    border-radius: 5%;
+
+    .numeros {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        width: 100px;
+        border: 2px solid white;
+        font-size: 40px;
+        border-radius: 15%;
+        background-color: black;
+        color: white;
+    }
+}
+
+.contenedor-visor {
+    border: 2px solid grey;
+    height: 80px;
+    width: 500px;
+    padding-right: 10px;
+    font-size: 350px;
+    background-color: rgb(219, 215, 215);
+    border: 2px solid white;
+    color: black;
+}
+
+.visorAcumulador {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 30px;
+    width: 500px;
+    padding-right: 10px;
+    font-size: 20px;
+    background-color: rgb(219, 215, 215);
+    color: black;
+    font-weight: bold;
+}
+
+.visorActual {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 50px;
+    width: 500px;
+    padding-right: 10px;
+    font-size: 30px;
+    background-color: rgb(219, 215, 215);
+    color: black;
+    font-weight: bolder;
+    overflow: hidden;
+}
+
+.contenedor-numeros {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 500px;
+    width: 500px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*----------------------------------------*/
+/*  03. Historial de cálculos
+/*----------------------------------------*/
+
+.img_espiral {
+    display: flex;
+    align-items: end;
+    height: 500px;
+    width: 50px;
+    position: relative;
+    top: 0px;
+    left: 23px;
+    z-index: 1;
+}
+
+.notas {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 400px;
+    height: 500px;
+}
+
+.historialCalculadora {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        text-align: center;
+        font-family: 'Lucida Sans';
+        color: white;
+        font-size: 25px;
+        text-decoration: underline;
+    }
+
+    .historialCalculos {
+        border: 2px solid white;
+        width: 350px;
+        height: 500px;
+        background-color: rgb(69, 69, 69);
+        overflow: auto;
+    }
+
+    li {
+        padding-bottom: 2px;
+        text-align: left;
+        font-family: 'Lucida Sans';
+        color: white;
+        list-style: none;
+        letter-spacing: 1px;
+    }
+}
+
+/*----------------------------------------*/
+/*  04. Botones
+/*----------------------------------------*/
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 600px;
+    width: 200px;
+}
+
+.boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 150px;
+    border: 2px solid white;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: Black;
+    color: White;
+    font-weight: bold;
+}
+
+.borrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    height: 50px;
+    width: 170px;
+    border: 2px solid white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+}
+
+/*----------------------------------------*/
+/*  05. Estilos
+/*    05.1 Estilos de calculadora
+/*----------------------------------------*/
+
+.opcion2 {
+    border: 2px solid white;
+    background-color: rgb(176, 9, 9);
+
+    .numeros {
+        border: 2px solid white;
+        font-weight: bold;
+        background-color: white;
+        color: black;
+    }
+}
+
+.opcion3 {
+    border: 2px solid white;
+    background-color: rgb(3, 104, 12);
+
+    .numeros {
+        border: 2px solid white;
+        font-weight: bold;
+        background-color: white;
+        color: black;
+    }
+}
+
+.opcion4 {
+    border: 2px solid white;
+    background-color: gold;
+
+    .numeros {
+        border: 2px solid white;
+        font-weight: bold;
+        background-color: silver;
+        color: black;
+    }
+}
+
+.opcion5 {
+    border: 2px solid yellow;
+    background-image: url(./images/pikachu.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .numeros {
+        border: 2px solid rgba(255, 255, 255, 0.9);
+        font-weight: bold;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+    }
+}
+
+.opcion6 {
+    border: 2px solid white;
+    background: -webkit-linear-gradient(to bottom, rgb(252, 3, 227), rgb(41, 213, 127));
+    background: linear-gradient(to bottom, rgb(252, 3, 227), rgb(41, 213, 127));
+
+    .numeros {
+        border: 2px solid white;
+        font-weight: bold;
+        background-color: rgb(119, 2, 137);
+        color: white;
+    }
+}
+
+/*----------------------------------------*/
+/*  05. Estilos
+/*    05.2 Estilos de botones
+/*----------------------------------------*/
+
+.red {
+    background-color: rgb(176, 9, 9);
+    color: white;
+}
+
+.green {
+    background-color: rgb(3, 104, 12);
+}
+
+.gys {
+    background-color: gold;
+    color: black;
+}
+
+.imagen {
+    background-image: url(./images/pikachu.png);
+    background-size: cover;
+    color: black;
+
+}
+
+.cool {
+    background: -webkit-linear-gradient(to bottom, rgb(252, 3, 227), rgb(41, 213, 127));
+    background: linear-gradient(to bottom, rgb(252, 3, 227), rgb(41, 213, 127));
+    color: white;
+}
+
+.borrarRed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    height: 50px;
+    width: 170px;
+    border: 2px solid white;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: rgb(176, 9, 9);
+    color: white;
+}
+
+.borrarGreen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    height: 50px;
+    width: 170px;
+    border: 2px solid white;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: rgb(3, 104, 12);
+    color: white;
+}
+
+.borrarGyS {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    height: 50px;
+    width: 170px;
+    border: 2px solid white;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: gold;
+    color: black;
+}
+
+.borrarImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    height: 50px;
+    width: 170px;
+    border: 2px solid white;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: rgb(247, 247, 47);
+    color: black;
+}
+
+.borrarCool {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    height: 50px;
+    width: 170px;
+    border: 2px solid white;
+    font-size: 20px;
+    border-radius: 15px;
+    background: -webkit-linear-gradient(to bottom, rgb(252, 3, 227), rgb(41, 213, 127));
+    background: linear-gradient(to bottom, rgb(252, 3, 227), rgb(41, 213, 127));
+    color: white;
+}
+
+/*----------------------------------------*/
+/*  05. Estilos
+/*    05.3 Estilos de historial
+/*----------------------------------------*/
+
+.histRed {
+
+    .historialCalculos {background-color: rgb(176, 9, 9)}
+
+    li {color: white}
+}
+
+.histGreen {
+
+    .historialCalculos {background-color: rgb(3, 104, 12)}
+
+    li {color: white}
+}
+
+.histGyS {
+
+    h1 {color: black}
+
+    .historialCalculos {background-color: gold}
+
+    li {color: black}
+}
+
+.histImg {
+
+    h1 {color: black}
+
+    .historialCalculos {background-color: rgb(247, 247, 47)}
+
+    li {color: black}
+}
+
+.histCool {
+
+    .historialCalculos {
+        background: -webkit-linear-gradient(to bottom, rgb(252, 3, 227), rgb(41, 213, 127));
+        background: linear-gradient(to bottom, rgb(252, 3, 227), rgb(41, 213, 127));
+    }
+
+    li {color: white}
+}
